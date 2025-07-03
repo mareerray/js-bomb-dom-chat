@@ -16,7 +16,7 @@ h2 {
 
 #main-grid {
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 60% 40%;
     max-width: 1200px;
     margin: 30px auto 0 auto;
     min-height: 500px;

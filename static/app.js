@@ -56,6 +56,14 @@ function renderGrid() {
 
 // event key listender
 document.addEventListener('keydown', function(e) {
+      // Only run game controls if NOT typing in an input or textarea
+    if (
+        e.target.tagName === 'INPUT' ||
+        e.target.tagName === 'TEXTAREA' ||
+        e.target.isContentEditable
+    ) {
+        return; // Let the input handle the key event normally
+    }
     e.preventDefault()
     let { row, col } = player;
     // movement
