@@ -1,0 +1,121 @@
+#chat-container {
+    width: 100%;
+    background: #888;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    align-items: stretch;
+}
+
+#chat-messages {
+    height: 320px;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 8px;
+    background: #fff;
+    overflow-y: auto;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+}
+
+#chat-messages div {
+    margin-bottom: 4px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: #f3e9d2;
+    display: inline-block;
+    max-width: 95%;
+    word-break: break-word;
+}
+
+#chat-input-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+#chat-input {
+    font-family: 'Courier New', Courier, monospace;
+    flex: 1 1 auto;
+    padding: 6px;
+    font-size: 15px;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+    background: #f9f9f9;
+    color: #222;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#chat-input:focus {
+    outline: none;
+    border-width: 2px;
+    border-color: #c8a060;
+}
+
+#chat-send {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 6px 18px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    background: #c8a060;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+#chat-send:hover {
+    background: orange;
+}
+
+@media (max-width: 1000px) {
+    #main-grid {
+        grid-template-columns: 1fr;
+    }
+    #game-container,
+    #chat-container {
+        width: 628px;
+        min-width: 0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #chat-container {
+        margin-top: 20px;
+    }
+    #game-grid {
+        width: 628px;
+        min-width: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 650px) {
+    #game-container,
+    #chat-container,
+    #game-grid {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1050px) and (min-width: 1000px) {
+    #chat-input-row {
+        min-width: 0;
+    }
+    #chat-input, #chat-send {
+        max-width: 100%;
+        min-width: 0;
+    }
+}
