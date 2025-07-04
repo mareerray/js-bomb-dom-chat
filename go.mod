@@ -1,4 +1,4 @@
-module js-bomb-dom
+module js-bomb-dom-chat
 
 go 1.23.0
 

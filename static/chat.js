@@ -1,7 +1,9 @@
 // --- Chat Logic ---
 
 const socket = new WebSocket('ws://localhost:8080/ws');
-
+socket.addEventListener('close', function(event) {
+    alert("Room is full (max 4 players). Please try again later.");
+});
 // let playerName = prompt("Enter your name:") || "Player" + Math.floor(Math.random() * 1000);
 
 const chatMessages = document.getElementById('chat-messages');
